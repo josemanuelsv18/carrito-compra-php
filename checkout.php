@@ -17,7 +17,7 @@ $pedido = new Pedido();
 
 // Obtener información del usuario
 $user_id = $_SESSION['user_id'];
-$stmt = $db->prepare("SELECT nombre, apellido, direccion FROM usuarios WHERE id = ?");
+$stmt = $db->prepare("SELECT nombre, apellido FROM usuarios WHERE id = ?");
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -27,7 +27,7 @@ $error = '';
 $success = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $direccion = $_POST['direccion'] ?? $usuario['direccion'];
+    //$direccion = $_POST['direccion'] ?? $usuario['direccion'];
     
     // Crear pedido
     $items = [];
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $carrito->vaciarCarrito();
         
         // Redirigir al recibo
-        header("Location: generar_recibo.php?pedido_id=$pedido_id");
+        header("Location: ./classes/factura.php?pedido_id=$pedido_id");
         exit();
     } else {
         $error = 'Hubo un error al procesar tu pedido. Por favor intenta nuevamente.';

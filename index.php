@@ -1,4 +1,7 @@
 <?php
+//Josemanuel Sifontes / 20-70-7436
+//Karen Sanchez / 8-1013-654
+
 require_once 'config/config.php';
 require_once 'classes/Auth.php';
 

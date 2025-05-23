@@ -1,8 +1,8 @@
 <?php
-require_once 'config/config.php';
-require_once 'classes/Auth.php';
-require_once 'classes/Pedido.php';
-require_once 'classes/PDFGenerator.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../classes/PDFGenerator.php';
+require_once __DIR__ . '/../classes/Auth.php';
+require_once __DIR__ . '/../classes/Pedido.php';
 
 $auth = new Auth();
 if (!$auth->isLoggedIn()) {

@@ -40,6 +40,7 @@ $carrito = new Carrito();
             <?php foreach ($productos as $producto): ?>
                 <div class="producto-card">
                     <h3><?= htmlspecialchars($producto['nombre']) ?></h3>
+                    <img src="<?= htmlspecialchars($producto['imagen_url']) ?>" alt="">
                     <p><?= htmlspecialchars($producto['descripcion']) ?></p>
                     <p class="precio">$<?= number_format($producto['precio'], 2) ?></p>
                     <form method="POST" action="agregar_al_carrito.php">

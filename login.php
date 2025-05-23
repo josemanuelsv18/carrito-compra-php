@@ -43,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button type="submit" class="btn">Ingresar</button>
         </form>
         <p>¿No tienes cuenta? <a href="register.php">Regístrate aquí</a></p>
+        <p>por Josemanuel Sifontes / 20-70-7436 y Karen Sanchez / 8-1013-654</p>
     </div>
 </body>
 </html>

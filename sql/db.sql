@@ -19,7 +19,7 @@ CREATE TABLE productos (
     nombre VARCHAR(100) NOT NULL,
     descripcion TEXT,
     precio DECIMAL(10, 2) NOT NULL,
-    imagen_url VARCHAR(255),
+    imagen_url VARCHAR(255)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Tabla de pedidos (órdenes completadas)

@@ -13,7 +13,7 @@ class Pedido {
         try {
             // Insertar pedido
             $stmt = $this->db->prepare("INSERT INTO pedidos (usuario_id, total) VALUES (?, ?)");
-            $stmt->bind_param("ids", $usuario_id, $total);
+            $stmt->bind_param("id", $usuario_id, $total);
             $stmt->execute();
             $pedido_id = $this->db->insert_id;
 
